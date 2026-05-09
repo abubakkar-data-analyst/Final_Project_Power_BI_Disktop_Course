@@ -1,1 +1,126 @@
-Retail Business Intelligence SolutionCapstone Project SubmissionAuthor: Abubakkar SiddiqueProject Date: May 9, 2026Format: Power BI Desktop (.pbix)1. Project OverviewThis project provides an end-to-end Business Intelligence solution for a global retail business. The objective was to transform raw, fragmented Excel data into a centralized, interactive dashboard that identifies sales trends, profit drivers, and regional performance.The project covers:Data Ingestion: Connecting to a multi-table Excel dataset.Data Engineering: Cleaning and transforming 500+ records via Power Query.Data Modeling: Implementing a performant Star Schema.Analytical Logic: Developing complex DAX measures for time-intelligence.Data Visualization: Creating a 2-page executive-ready report.2. Dataset DescriptionThe project utilizes a relational dataset consisting of 6 tables:Fact_Sales: Central transaction table containing sales amounts, quantities, and keys.Dim_Date: A continuous calendar (2022–2024) supporting time-intelligence.Dim_Product: Product catalog including categories (Electronics, Apparel, etc.) and brands.Dim_Customer: Master list of customers, including regional segments (Gold, Premium, etc.).Dim_Store: Physical store locations across global regions.Dim_Promotion: Marketing data used to analyze discount impacts. 3. Technical WorkflowModule 1: Data Transformation (Power Query)Raw data was cleaned to ensure 100% accuracy:Standardization: Used a Custom M Function to normalize text casing across all tables.Data Quality: Handled null values in keys by replacing them with "0" to maintain referential integrity.Optimization: Configured data types (Int64 for keys, Decimal for sales) to reduce model size.Module 2: The Star Schema (Data Modeling)I built a professional Star Schema to ensure fast filtering and accurate calculations.Relationships: All Dimension tables are connected to the Fact table via One-to-Many ($1:*$) relationships.Direction: Single-direction filtering prevents circular dependencies. Module 3: DAX & AnalyticsI developed a "Measures Table" to store analytical logic. Key measures include:Total Sales & Total Profit: Core performance indicators.Sales LY: Uses SAMEPERIODLASTYEAR to compare current performance with the previous year.Profit Margin %: A calculated ratio to assess business efficiency.Running Total: Cumulative sales tracking over time.4. Dashboard FeaturesPage 1: Executive OverviewKPI Cards: High-level summary of Sales, Profit Margin, and Growth %.Sales Trend Chart: Comparison of Monthly Sales vs. Last Year (LY).Regional Analysis: A Clustered Bar Chart showing performance by City (used as a high-accuracy alternative to the Map visual).Page 2: Product & Customer Deep-DiveTop 10 Analysis: Dynamically identifies the best-selling products using the Top N filter.Performance Matrix: Cross-analyzes Customer Segments against Product Categories using a heat map.Interactivity: Includes a Page Navigator and a Reset Filters bookmark button for better usability.5. How to Use the ProjectSoftware Requirements: You must have Power BI Desktop (latest version) installed.Opening the File: Open Final_Project.pbix.Data Refresh: If prompted, ensure the source RetailDataset_FinalProject.xlsx is in the same folder and click 'Refresh'.Navigation: Use the buttons at the top of the report to switch between the "Executive Overview" and "Deep-Dive" pages. Use the "Clear Filters" button to reset the slicers.6. Declaration of IndependenceI, Abubakkar Siddique, declare that this capstone project is my original work. I have followed the course modules to build this solution independently, using only the tools and methodologies taught in the curriculum.Submission Checklist (ZIP Archive)[x] Final_Project.pbix (Power BI Report)[x] RetailDataset_FinalProject.xlsx (Source Data)[x] README_Abubakkar_Siddique.pdf (Documentation)
+# Power BI Retail Analytics Project
+
+## Retail Sales Dashboard & Business Intelligence Solution
+
+---
+
+# Project Overview
+
+This project was built in Power BI to transform raw retail data into meaningful business insights. The workflow included data cleaning, data modeling, DAX calculations, dashboard creation, and data quality validation.
+
+The goal was to help businesses track sales performance, profitability, customer behavior, and product growth through interactive dashboards.
+
+---
+
+# Phase 1: Power Query Transformations
+
+### Completed Tasks
+
+* Imported all 6 CSV files into Power BI
+* Created a **Price Segment** column:
+
+  * Premium → UnitCost > 500
+  * Budget → UnitCost ≤ 500
+* Merged Store Region data into Fact_Sales
+* Applied Unpivoting for better table structure
+* Created a custom function to clean and format text
+* Removed unnecessary columns for better performance
+
+---
+
+# Phase 2: Star Schema Data Modeling
+
+### Data Model Structure
+
+Built a **Star Schema** model using:
+
+* Fact_Sales (Main Table)
+* Dim_Product
+* Dim_Customer
+* Dim_Store
+* Dim_Date
+
+### Relationships
+
+All tables were connected using:
+
+* One-to-Many (1:*)
+* Single Direction Filtering
+
+To improved report speed and accuracy.
+
+---
+
+# Phase 3: DAX Measures
+
+### Key Measures Created
+
+* Total Sales
+* Total Cost
+* Profit Margin %
+* Sales YTD
+* Sales LY
+* Sales Growth %
+* Running Total
+* Top Product
+
+These measures helped analyze business performance and sales trends.
+
+---
+
+# Phase 4: Data Quality Framework
+
+### Quality Checks Applied
+
+* Checked missing SalesAmount values
+* Validated Quantity > 0
+* Verified sales calculations
+* Checked key relationships
+* Ensured unique SalesID values
+* Identified orphan records
+* Validated Discount % range
+
+To improved data reliability and reporting accuracy.
+
+---
+
+# Phase 5: Dashboard Design
+
+## Executive Dashboard
+
+Included:
+
+* KPI Cards
+* Sales Trend Line Chart
+* Sales Map by City
+* Year & Category Filters
+
+## Product & Customer Analysis
+
+Included:
+
+* Top 10 Products
+* Profit vs Quantity Scatter Plot
+* Customer Segment Matrix
+* Navigation & Reset Buttons
+
+---
+
+# Business Insights
+
+The dashboard helped solve important business problems by:
+
+* Identifying top-selling products
+* Tracking sales growth trends
+* Understanding customer segments
+* Measuring profitability accurately
+* Improving data quality
+* Supporting better business decisions
+
+---
+
+# Conclusion
+
+This project demonstrates a complete Power BI Business Intelligence workflow from raw data to interactive reporting.
+
+Using Power Query, Star Schema modeling, DAX, and dashboard visualization, the project successfully converted retail data into actionable business insights that help businesses improve performance and make smarter decisions.
