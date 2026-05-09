@@ -1,0 +1,16 @@
+CustomerKey,CustomerID,CustomerName,Email,City,Country,Segment,JoinDate
+1,C001,Ahmed Khan,ahmed.khan@email.com,Lahore,Pakistan,Premium,2018-02-22
+2,C002,Sara Ali,sara.ali@email.com,Karachi,Pakistan,Standard,2020-08-08
+3,C003,Michael Brown,michael.b@email.com,London,UK,Gold,2022-10-08
+4,C004,Emily Davis,emily.d@email.com,New York,USA,Gold,2018-11-11
+5,C005,Fatima Sheikh,fatima.s@email.com,Islamabad,Pakistan,Standard,2021-02-13
+6,C006,John Smith,j.smith@email.com,Chicago,USA,Premium,2020-09-24
+7,C007,Aisha Malik,aisha.m@email.com,Lahore,Pakistan,Bronze,2020-01-17
+8,C008,David Wilson,d.wilson@email.com,Manchester,UK,Standard,2020-09-26
+9,C009,Priya Sharma,priya.s@email.com,Dubai,UAE,Gold,2022-08-16
+10,C010,Omar Farooq,omar.f@email.com,Karachi,Pakistan,Bronze,2018-05-21
+11,C011,Jennifer Lee,j.lee@email.com,Los Angeles,USA,Premium,2019-06-17
+12,C012,Hassan Raza,hassan.r@email.com,Multan,Pakistan,Standard,2018-02-06
+13,C013,Sophie Martin,s.martin@email.com,Paris,France,Gold,2022-09-01
+14,C014,Carlos Rivera,c.rivera@email.com,Madrid,Spain,Standard,2018-04-22
+15,C015,Zainab Hussain,zainab.h@email.com,Lahore,Pakistan,Bronze,2019-11-14
